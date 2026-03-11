@@ -1,0 +1,49 @@
+{
+  "name": "svelte-i18n-locale-chain",
+  "version": "0.1.0",
+  "description": "Configurable locale fallback chains for svelte-i18n. Your pt-BR users deserve pt-PT, not English.",
+  "author": "i18nagent.ai",
+  "license": "MIT",
+  "homepage": "https://github.com/i18n-agent/svelte-i18n-locale-chain#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i18n-agent/svelte-i18n-locale-chain"
+  },
+  "keywords": [
+    "svelte-i18n", "svelte", "i18n", "locale", "fallback", "chain",
+    "localization", "internationalization", "sveltekit"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "peerDependencies": {
+    "svelte-i18n": ">=3.0.0"
+  },
+  "devDependencies": {
+    "svelte-i18n": "^4.0.0",
+    "typescript": "^5.5.0",
+    "tsup": "^8.0.0",
+    "vitest": "^2.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run lint && npm test && npm run build"
+  }
+}
