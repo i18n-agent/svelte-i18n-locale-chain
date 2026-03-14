@@ -1,6 +1,6 @@
 {
   "name": "svelte-i18n-locale-chain",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Configurable locale fallback chains for svelte-i18n. Your pt-BR users deserve pt-PT, not English.",
   "author": "i18nagent.ai",
   "license": "MIT",
