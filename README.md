@@ -355,6 +355,16 @@ Works with svelte-i18n v3+ and v4+.
 **SvelteKit SSR?**
 svelte-i18n stores are singletons -- in a SvelteKit SSR environment, initialize per-request in the `handle` hook to avoid locale bleed between concurrent requests. Call `initLocaleChain` (or `setLocale`) in your server `handle` function so each request gets the correct locale context.
 
+## Example
+
+A minimal example app is included in the [`example/`](./example/) directory. It demonstrates the locale chain resolving three keys for `pt-BR`, showing fallback from `pt-BR -> pt -> en`.
+
+```bash
+cd example && pnpm install && pnpm dev
+```
+
+See [`example/README.md`](./example/README.md) for full setup instructions.
+
 ## Contributing
 
 - Open issues for bugs or feature requests.
